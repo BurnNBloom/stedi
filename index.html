@@ -3171,7 +3171,9 @@
 		var loaderTimeout = setTimeout(function() {
 			$body.classList.add('with-loader');
 		}, 500);
-		var $loaderElement = document.createElement('div'); $loaderElement.id = 'loader'; $body.appendChild($loaderElement);
+		var $loaderElement = document.createElement('div');
+		$loaderElement.id = 'loader';
+		$body.appendChild($loaderElement);
 		var loadHandler = function() {
 			setTimeout(function() {
 				clearTimeout(loaderTimeout);
@@ -3186,8 +3188,14 @@
 					}, 1000);
 				}, 1000);
 			}, 100);
-		}; on('load', loadHandler); loadElements(document.body);
-		var style, sheet, rule; style = document.createElement('style'); style.appendChild(document.createTextNode('')); document.head.appendChild(style); sheet = style.sheet;
+		};
+		on('load', loadHandler);
+		loadElements(document.body);
+		var style, sheet, rule;
+		style = document.createElement('style');
+		style.appendChild(document.createTextNode(''));
+		document.head.appendChild(style);
+		sheet = style.sheet;
 		if(client.mobile) {
 			(function() {
 				if(client.flags.lsdUnits) {
@@ -3335,7 +3343,8 @@
 				on('scroll', this.handler);
 				(this.handler)();
 			}
-		}; scrollEvents.init();
+		};
+		scrollEvents.init();
 		var onvisible = {
 			effects: {
 				'blur-in': {
@@ -4120,49 +4129,56 @@
 					w.parentNode.removeChild(w);
 				}
 			},
-		}; onvisible.add('.buttons.style2', {
+		};
+		onvisible.add('.buttons.style2', {
 			style: 'fade-up',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 375,
 			replay: false
-		}); onvisible.add('h1.style2, h2.style2, h3.style2, p.style2', {
+		});
+		onvisible.add('h1.style2, h2.style2, h3.style2, p.style2', {
 			style: 'fade-down',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 0,
 			replay: false
-		}); onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', {
+		});
+		onvisible.add('h1.style1, h2.style1, h3.style1, p.style1', {
 			style: 'fade-left',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 125,
 			replay: false
-		}); onvisible.add('h1.style4, h2.style4, h3.style4, p.style4', {
+		});
+		onvisible.add('h1.style4, h2.style4, h3.style4, p.style4', {
 			style: 'fade-left',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 125,
 			replay: false
-		}); onvisible.add('h1.style11, h2.style11, h3.style11, p.style11', {
+		});
+		onvisible.add('h1.style11, h2.style11, h3.style11, p.style11', {
 			style: 'fade-left',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 125,
 			replay: false
-		}); onvisible.add('h1.style7, h2.style7, h3.style7, p.style7', {
+		});
+		onvisible.add('h1.style7, h2.style7, h3.style7, p.style7', {
 			style: 'fade-left',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 125,
 			replay: false
-		}); onvisible.add('.buttons.style3', {
+		});
+		onvisible.add('.buttons.style3', {
 			style: 'fade-up',
 			speed: 1000,
 			intensity: 0,
@@ -4171,28 +4187,32 @@
 			stagger: 125,
 			staggerSelector: ':scope > li',
 			replay: false
-		}); onvisible.add('h1.style10, h2.style10, h3.style10, p.style10', {
+		});
+		onvisible.add('h1.style10, h2.style10, h3.style10, p.style10', {
 			style: 'fade-left',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 125,
 			replay: false
-		}); onvisible.add('h1.style9, h2.style9, h3.style9, p.style9', {
+		});
+		onvisible.add('h1.style9, h2.style9, h3.style9, p.style9', {
 			style: 'fade-down',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 0,
 			replay: false
-		}); onvisible.add('h1.style6, h2.style6, h3.style6, p.style6', {
+		});
+		onvisible.add('h1.style6, h2.style6, h3.style6, p.style6', {
 			style: 'fade-left',
 			speed: 1000,
 			intensity: 0,
 			threshold: 4,
 			delay: 125,
 			replay: false
-		}); ready.run();
+		});
+		ready.run();
 	})();
 	</script>
 </body>
